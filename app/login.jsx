@@ -12,8 +12,11 @@ export default function SignIn() {
   const [usePass, setPass] = useState('');
 
   const handleSignIn = () => {
-    if (useCorreo === correo && usePass === usePass) {
-      signIn(useCorreo); 
+    const emailLower = useCorreo.toLowerCase();
+    const passLower = usePass.toLowerCase();
+
+    if (emailLower === correo && passLower === password) {
+      signIn(emailLower); 
       setTimeout(() => router.replace('/'), 500);
     } else {
       alert('Credenciales inválidas ❌');
