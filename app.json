@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "myAuth",
-    "slug": "myAuth",
+    "slug": "securefy",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -27,6 +27,15 @@
     "plugins": [
       "expo-router",
       "expo-secure-store"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "8d36327a-773f-455e-85f7-dcf3febf8f40"
+      }
+    },
+    "owner": "soygaelgrezz"
   }
 }
