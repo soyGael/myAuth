@@ -1,5 +1,5 @@
 import { Text } from 'react-native';
-import { Redirect, Stack } from 'expo-router';
+import { Redirect, Stack, Tabs} from 'expo-router';
 import { useSession } from '../../ctx'; 
 
 export default function AppLayout() {
@@ -13,5 +13,32 @@ export default function AppLayout() {
     return <Redirect href="/login" />;
   }
 
-  return <Stack />;
+  return (
+    <Tabs
+    screenOptions={{
+      tabBarActiveTintColor: "#ffd33d",
+      headerStyle: {
+        backgroundColor: "#25292e",
+      },
+      headerShadowVisible: false,
+      headerTintColor: "#fff",
+      tabBarStyle: {
+        backgroundColor: "#25292e",
+      },
+    }}
+  >
+    <Tabs.Screen
+      name="index"
+      options={{
+        title: "Home",
+      }}
+    />
+    <Tabs.Screen
+      name="push"
+      options={{
+        title: "Push",
+      }}
+    />
+  </Tabs>
+  );
 }
