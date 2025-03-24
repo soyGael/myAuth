@@ -21,7 +21,7 @@ export default function SignIn() {
 
     try {
       // Llamada al endpoint de la API con Axios
-      const response = await axios.post("https://5dc3-2806-10be-8-5011-dcb-edf1-8be6-b53a.ngrok-free.app/auth", {
+      const response = await axios.post("https://b448-2806-10be-8-5011-ec9b-c505-4811-25ca.ngrok-free.app/auth", {
         email: emailLower,
         password: passLower
       });
